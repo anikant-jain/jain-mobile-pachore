@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Street Café – Pachore</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f7f7f7;
+            color:#333;
+        }
+        header{
+            text-align:center;
+            padding:20px;
+            background:white;
+            box-shadow:0 2px 6px rgba(0,0,0,0.1);
+        }
+        header img{
+            width:120px;
+            border-radius:50%;
+        }
+        nav{
+            background:#ff5c8d;
+            padding:10px;
+            text-align:center;
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 20px;
+            font-size:18px;
+            font-weight:bold;
+        }
+        section{
+            padding:30px;
+        }
+        h2{
+            color:#ff5c8d;
+        }
+        .menu-grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap:20px;
+        }
+        .card{
+            background:white;
+            border-radius:10px;
+            box-shadow:0 3px 8px rgba(0,0,0,0.1);
+            overflow:hidden;
+            text-align:center;
+        }
+        .card img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+        }
+        footer{
+            background:#333;
+            color:white;
+            padding:20px;
+            text-align:center;
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="logo.png" alt="The Street Cafe Logo">
+        <h1>The Street Café</h1>
+        <p>Fresh • Delicious • Refreshing</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Popular Items</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>Welcome to The Street Café</h2>
+        <p>
+            Enjoy the best shakes, cold coffee, fast food and refreshing beverages in Pachore!  
+            We serve quality taste using premium ingredients at affordable prices.
+        </p>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu">
+        <h2>Popular Items</h2>
+        <div class="menu-grid">
+
+            <!-- ITEM 1 -->
+            <div class="card">
+                <img src="pinkshake.jpg" alt="Pink Shake">
+                <h3>Special Pink Shake</h3>
+                <p>Creamy, sweet and topped with cake chunks.</p>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="card">
+                <img src="coldcoffee.jpg" alt="Cold Coffee">
+                <h3>Classic Cold Coffee</h3>
+                <p>Rich, chilled and drizzled with chocolate syrup.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Shop No. 6, Shri Ram Complex A, B Road, near Utsav Vatika, Pachore, Madhya Pradesh 465683</p>
+        <p><strong>Phone:</strong> 09999597107</p>
+        <p>Visit us today for the best taste in town!</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 The Street Café • All Rights Reserved
+    </footer>
+
+</body>
+</html>
