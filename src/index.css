@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar for preview */
+  .overflow-auto::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .overflow-auto::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 3px;
+  }
+
+  .overflow-auto::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+
+  .overflow-auto::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+@layer utilities {
+  /* Preview scaling for smaller screens */
+  .preview-scale-wrapper {
+    transform-origin: top left;
+  }
+
+  @media (max-width: 640px) {
+    .preview-scale-wrapper {
+      transform: scale(0.35);
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 768px) {
+    .preview-scale-wrapper {
+      transform: scale(0.5);
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .preview-scale-wrapper {
+      transform: scale(0.65);
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .preview-scale-wrapper {
+      transform: scale(0.8);
+    }
+  }
+
+  /* Print styles */
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+
+    #invoice-preview,
+    #invoice-preview * {
+      visibility: visible;
+    }
+
+    #invoice-preview {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 210mm;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      border: none;
+    }
+  }
+}
